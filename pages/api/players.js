@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
   const sheets = google.sheets({ version: "v4", auth });
   const spreadsheetId = process.env.GOOGLE_SHEET_ID;
-  const range = "Sheet1!B12:H"; // Adjust based on your sheet
+  const range = "Player!B12:I"; // Adjust based on your sheet
 
   const response = await sheets.spreadsheets.values.get({ spreadsheetId, range });
   const rows = response.data.values;
