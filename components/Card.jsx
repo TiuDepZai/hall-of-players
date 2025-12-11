@@ -54,8 +54,12 @@ export default function Card({ player }) {
             {player.Rank} {player.Name}
           </h2>
 
-          <p className="text-sm text-[#666666] mt-1">{player.ActivePeriod}</p>
-
+          {player.ActivePeriod ? (
+            <p className="text-sm text-[#666666] mt-1">
+              Active from {player.ActivePeriod}
+            </p>
+          ) : null}
+          
           {player.LinkedIn && (
             <a
               href={player.LinkedIn}
